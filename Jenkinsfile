@@ -7,7 +7,7 @@ pipeline{
                 sh "ls -lrth"
               //  sh "terraform init"
                //sh  "terraform plan -auto-approve"
-            sh  "terraform apply -auto-approve  "
+           // sh  "terraform apply -auto-approve  "
             }
         }
         stage("TF Validate"){
@@ -22,7 +22,8 @@ pipeline{
         }
         stage("TF Apply"){
             steps{
-                echo "Executing Terraform Apply"
+             //   sh  "terraform apply -auto-approve"
+                sh  "terraform destroyy -auto-approve"
             }
         }
         stage("Invoke Lambda"){
