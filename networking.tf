@@ -31,10 +31,10 @@ resource "aws_subnet" "public" {
 }
 
 # Internet Gateway for the public subnet
-resource "aws_internet_gateway" "test-igw" {
+//resource "aws_internet_gateway" "test-igw" {
  // vpc_id = aws_vpc.test-vpc.id
-  vpc_id            = data.aws_vpc.vpc.id
-}
+//  vpc_id            = data.aws_vpc.vpc.id
+//}
 
 # Route the public subnet traffic through the IGW
 resource "aws_route" "internet_access" {
