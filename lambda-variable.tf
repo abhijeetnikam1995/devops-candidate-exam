@@ -1,6 +1,7 @@
 variable "component" {
   description = "The name of the component or service"
   type        = string
+  default = "test"
 }
 
 variable "deployment_identifier" {
