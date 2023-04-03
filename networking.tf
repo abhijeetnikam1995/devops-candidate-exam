@@ -60,7 +60,7 @@ resource "aws_eip" "test-eip" {
 # Create a new route table for the private subnets, make it route non-local traffic through the NAT gateway to the internet
 resource "aws_route_table" "private" {
   count  = var.az_count
-  vpc_id = aws_vpc.test-vpc.id
+  vpc_id = data.aws_vpc.vpc.id
 
   route {
     cidr_block     = "0.0.0.0/0"
