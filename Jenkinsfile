@@ -23,8 +23,8 @@ pipeline{
         
            stage("TF create S3 using AWS cli"){
             steps{
-                sh "aws --version"
-            //   sh "aws s3 mb s3://abhijeetnikam1995"
+                sh "aws --version" // checking aws cli version
+            //   sh "aws s3 mb s3://abhijeetnikam1995"  //getting access denied error
             }
         }
 
