@@ -14,7 +14,8 @@ resource "aws_subnet" "private" {
   count             = var.az_count
   cidr_block        = cidrsubnet(aws_vpc.test-vpc.cidr_block, 8, count.index)
   availability_zone = data.aws_availability_zones.available.names[count.index]
-  vpc_id            = aws_vpc.test-vpc.id
+ // vpc_id            = aws_vpc.test-vpc.id
+  vpc_id = data.aws_vpc.vpc.id
 }
 
 # Create var.az_count public subnets, each in a different AZ
