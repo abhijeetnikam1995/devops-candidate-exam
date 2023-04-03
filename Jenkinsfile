@@ -7,7 +7,7 @@ pipeline{
                 sh "ls -lrth"
                 sh "terraform init"
                //sh  "terraform plan -auto-approve"
-            sh  "terraform plan "
+            sh  "terraform apply -auto-approve  "
             }
         }
         stage("TF Validate"){
