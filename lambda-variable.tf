@@ -7,6 +7,7 @@ variable "lambda_function_name" {
 variable "lambda_description" {
   description = "The description to use for the AWS Lambda"
   type        = string
+  default     = "this is lambda for email"
 }
 
 variable "lambda_package_type" {
