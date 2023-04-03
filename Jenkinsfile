@@ -22,8 +22,8 @@ pipeline{
         }
         stage("TF Apply"){
             steps{
-                sh  "terraform apply -auto-approve"
-            //    sh  "terraform destroy -auto-approve"
+             //   sh  "terraform apply -auto-approve"
+                sh  "terraform destroy -auto-approve"
             }
         }
         stage("Invoke Lambda"){
