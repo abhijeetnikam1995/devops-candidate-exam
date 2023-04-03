@@ -1,6 +1,7 @@
 variable "lambda_function_name" {
   description = "The name to use for the lambda function"
   type        = string
+  default     = "email-lambda"
 }
 
 variable "lambda_description" {
