@@ -5,7 +5,7 @@ pipeline{
             steps{
                 echo "Executing Terraform Init"
                 sh "ls -lrth"
-                sh "terraform init"
+              //  sh "terraform init"
                //sh  "terraform plan -auto-approve"
             sh  "terraform apply -auto-approve  "
             }
