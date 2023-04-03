@@ -26,20 +26,20 @@ resource "aws_subnet" "public" {
   cidr_block              = cidrsubnet(data.aws_vpc.vpc.cidr_block, 8, var.az_count + count.index)
   availability_zone       = data.aws_availability_zones.available.names[count.index]
 //  vpc_id                  = aws_vpc.test-vpc.id
-  vpc_id            = data.aws_vpc.vp.id
+  vpc_id            = data.aws_vpc.vpc.id
   map_public_ip_on_launch = true
 }
 
 # Internet Gateway for the public subnet
 resource "aws_internet_gateway" "test-igw" {
  // vpc_id = aws_vpc.test-vpc.id
-  vpc_id            = data.aws_vpc.vp.id
+  vpc_id            = data.aws_vpc.vpc.id
 }
 
 # Route the public subnet traffic through the IGW
 resource "aws_route" "internet_access" {
  // route_table_id         = aws_vpc.test-vpc.main_route_table_id
-  route_table_id         = data.aws_vpc.vp.main_route_table_id
+  route_table_id         = data.aws_vpc.vpc.main_route_table_id
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = aws_internet_gateway.test-igw.id
 }
