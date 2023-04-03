@@ -10,7 +10,7 @@ terraform {
     key            = "abhijeet.nikam"
     region         = "ap-south-1"
     encrypt        = true
-    dynamodb_table = "terraform-lock"
-    role_arn       = "arn:aws:iam::<AWS_ACCOUNT_ID_OF_BACKEND>:role/terraform-backend"
+ //   dynamodb_table = "terraform-lock"
+   // role_arn       = "arn:aws:iam::<AWS_ACCOUNT_ID_OF_BACKEND>:role/terraform-backend"
   }
 }
