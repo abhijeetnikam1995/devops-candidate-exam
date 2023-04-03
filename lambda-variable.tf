@@ -7,6 +7,7 @@ variable "component" {
 variable "deployment_identifier" {
   description = "An identifier for this instantiation e.g. <deployment_type>-<deployment_label>"
   type        = string
+   default = "test"
 }
 
 ##########################
