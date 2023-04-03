@@ -108,3 +108,32 @@ variable "tags" {
   default     = {}
   nullable    = false
 }
+
+
+variable "include_vpc_access" {
+  description = "Whether or not to allow the lambda to access a VPC."
+  type        = bool
+  default     = false
+  nullable    = false
+}
+
+variable "include_execution_role_policy_vpc_access_management_statement" {
+  description = "Whether or not to include a execution role policy statement to allow network management for VPC access. Defaults to `true`."
+  type = bool
+  default = true
+  nullable = false
+}
+
+variable "include_execution_role_policy_log_management_statement" {
+  description = "Whether or not to include a execution role policy statement to allow log management for lambda logging. Defaults to `true`."
+  type = bool
+  default = true
+  nullable = false
+}
+
+variable "publish" {
+  description = "Whether or not to publish creation / change as a new lambda function version."
+  type        = bool
+  default     = false
+  nullable    = false
+}
