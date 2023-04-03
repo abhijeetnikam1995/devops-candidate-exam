@@ -42,7 +42,7 @@ resource "aws_route" "internet_access" {
   route_table_id         = data.aws_vpc.vpc.main_route_table_id
   destination_cidr_block = "0.0.0.0/0"
  // gateway_id             = aws_internet_gateway.test-igw.id
-  gateway_id             = data.aws_nat_gateway.nat.id.id
+  gateway_id             = data.aws_nat_gateway.nat.id
 }
 
 # Create a NAT gateway with an Elastic IP for each private subnet to get internet connectivity
