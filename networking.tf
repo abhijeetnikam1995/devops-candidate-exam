@@ -1,8 +1,8 @@
 # network.tf
 
-resource "aws_vpc" "test-vpc" {
-  cidr_block = "172.16.0.0/16"
-}
+//resource "aws_vpc" "test-vpc" {
+//  cidr_block = "172.16.0.0/16"
+//}
 
 # Fetch AZs in the current region
 data "aws_availability_zones" "available" {
