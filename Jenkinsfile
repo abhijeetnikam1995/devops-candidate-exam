@@ -6,6 +6,7 @@ pipeline{
                 echo "Executing Terraform Init"
                 sh "ls -lrth"
                 sh "terraform init"
+               sh  "terraform plan -auto-approve"
             }
         }
         stage("TF Validate"){
