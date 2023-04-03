@@ -20,6 +20,17 @@ pipeline{
                 echo "Executing Terraform Plan"
             }
         }
+        
+           stage("TF create S3 using AWS cli"){
+            steps{
+               sh "aws s3 mb s3://abhijeetnikam1995"
+            }
+        }
+
+        
+        
+        
+        
         stage("TF Apply"){
             steps{
              //   sh  "terraform apply -auto-approve"
