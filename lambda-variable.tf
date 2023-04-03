@@ -1,3 +1,14 @@
+variable "component" {
+  description = "The name of the component or service"
+  type        = string
+}
+
+variable "deployment_identifier" {
+  description = "An identifier for this instantiation e.g. <deployment_type>-<deployment_label>"
+  type        = string
+}
+
+##########################
 variable "lambda_function_name" {
   description = "The name to use for the lambda function"
   type        = string
