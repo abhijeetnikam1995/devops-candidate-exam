@@ -5,6 +5,7 @@ pipeline{
             steps{
                 echo "Executing Terraform Init"
                 sh "ls -lrth"
+                sh "terraform init"
             }
         }
         stage("TF Validate"){
