@@ -38,7 +38,7 @@ data "aws_iam_policy_document" "log_management_statement" {
       "logs:PutLogEvents"
     ]
     resources = [
-      "arn:aws:logs:${var.region}:${data.aws_caller_identity.current.account_id}:*"
+      "arn:aws:logs:${var.aws_region}:${data.aws_caller_identity.current.account_id}:*"
     ]
   }
 }
